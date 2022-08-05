@@ -24,6 +24,7 @@ public class SpaceController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        print("gay");
         if (collision.transform.CompareTag("Cookie"))
         {
             Destroy(collision.gameObject);

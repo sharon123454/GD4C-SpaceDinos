@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1775782621729665053}
   - component: {fileID: 1775782621729665054}
-  - component: {fileID: 1775782621729665052}
+  - component: {fileID: 6390319644909243003}
   m_Layer: 0
   m_Name: SpaceCookie
   m_TagString: Cookie
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1775782621729665052
+--- !u!61 &6390319644909243003
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

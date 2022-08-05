@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 922380944}
   - component: {fileID: 922380945}
   - component: {fileID: 922380943}
+  - component: {fileID: 922380946}
   m_Layer: 0
   m_Name: SpacePlayer
   m_TagString: Untagged
@@ -318,6 +319,27 @@ MonoBehaviour:
   MaxXMousePos: 7.5
   MinYMousePos: -3.5
   MaxYMousePos: 3.5
+--- !u!50 &922380946
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922380942}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1782217140
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1775782621729665053, guid: 27ebd03ef66c5b4479170fdee3b089a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 1775782621729665053, guid: 27ebd03ef66c5b4479170fdee3b089a6, type: 3}
       propertyPath: m_LocalPosition.y
