@@ -163,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237270297}
   - component: {fileID: 237270298}
+  - component: {fileID: 237270299}
   m_Layer: 0
   m_Name: cookieSpawner
   m_TagString: Untagged
@@ -199,8 +200,23 @@ MonoBehaviour:
   cookie: {fileID: 1515746261818076473, guid: 2eba76e03fdb2c64c8fc5aba0d1062fc, type: 3}
   left: {fileID: 1471063089}
   right: {fileID: 199198363}
+  cookieSpeed: 1
   intervalLow: 1
-  intervalHigh: 1
+  intervalHigh: 3
+--- !u!114 &237270299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237270296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8b9d3aa02c5a646af9955d641ad2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookieSpawner: {fileID: 237270298}
+  cookieNeeded: 2
 --- !u!1 &364350952
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: {fileID: 1471063089}
   right: {fileID: 199198363}
+  speed: 2
+  sprite: {fileID: 799222138}
+  minToFlip: 0.05
 --- !u!61 &799222141
 BoxCollider2D:
   m_ObjectHideFlags: 0

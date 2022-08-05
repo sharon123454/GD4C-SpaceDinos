@@ -7,10 +7,12 @@ public class cookieSpawner : MonoBehaviour
     [SerializeField] GameObject cookie;
     [SerializeField] Transform left;
     [SerializeField] Transform right;
+    [SerializeField] public float cookieSpeed;
     private float interval;
-    [SerializeField] private float intervalLow;
-    [SerializeField] private float intervalHigh;
+    [SerializeField] public float intervalLow;
+    [SerializeField] public float intervalHigh;
     private GameObject currentCookie;
+    
 
     public void spawn()
     {
@@ -18,6 +20,7 @@ public class cookieSpawner : MonoBehaviour
         float SpawnYPos = Random.Range(left.transform.position.y, right.transform.position.y);
         Vector2 newPos = new Vector2(SpawnXPos, SpawnYPos);
         currentCookie = Instantiate(cookie, newPos, Quaternion.identity);
+        currentCookie.GetComponent<cookie>().SetSpeed(cookieSpeed);
     }
 
     

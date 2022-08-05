@@ -5,6 +5,7 @@ using UnityEngine;
 public class cookie : MonoBehaviour
 {   
     private SpriteRenderer sprite;
+   
     float speed=1;
 
     private void Start()
@@ -15,14 +16,19 @@ public class cookie : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, transform.position.y - speed*Time.deltaTime, transform.position.z);
     }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            cookieManager.cookieCount += 1;
             Destroy(gameObject);
-        }
 
-    }
-    
+        }
+    }    
 
 }
