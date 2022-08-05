@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EggGameManager : MonoBehaviour
 {
-    [SerializeField] Image BGImage;
+    [SerializeField] SpriteRenderer BGImage;
     [SerializeField] Sprite[] spriteArr;
     int counter = 0;
 
