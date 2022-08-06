@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MayorOfFunkyTown : MonoBehaviour
 {
-
-    private void start()
+    private void OnEnable()
     {
         Cursor.visible = true;
     }
+
     public void loadEgg() 
     {
 

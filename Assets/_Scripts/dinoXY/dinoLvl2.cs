@@ -7,7 +7,6 @@ public class dinoLvl2 : MonoBehaviour
 {
     [SerializeField] Transform left;
     [SerializeField] Transform right;
-    [SerializeField] float speed = 1;
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] SkeletonAnimation skeleton;
     //[SerializeField] float minToFlip = 0.05f;

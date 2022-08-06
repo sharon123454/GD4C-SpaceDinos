@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Spine.Unity;
 
 public class SpaceController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SpaceController : MonoBehaviour
     public static bool Mode2 = false;
 
     [SerializeField] int GameMode = 0;
+    [SerializeField] SkeletonAnimation skeleton;
     [SerializeField] SpaceSpawner spawner;
     [SerializeField] GameObject JetPrefab;
     [SerializeField] Transform jetSpawnPoint;
@@ -35,16 +37,17 @@ public class SpaceController : MonoBehaviour
         {
             case 0:
                 soundManager.Instance.intractions3.Play();
+                counter = 0;
                 break;                
             case 1:
+                soundManager.Instance.intractions4.Play();
                 counter = cookiesForLvl1;
                 TriggerMode1();
-                soundManager.Instance.intractions4.Play();
                 break;
             case 2:
+                soundManager.Instance.intractions5.Play();
                 counter = cookiesForLvl2;
                 TriggerMode2();
-                soundManager.Instance.intractions5.Play();
                 break;
             default:
                 break;
@@ -80,9 +83,7 @@ public class SpaceController : MonoBehaviour
 
         movableCookieInCollision = null;
     }
-
     
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("Cookie"))
@@ -126,6 +127,12 @@ public class SpaceController : MonoBehaviour
 
     private void Collect()
     {
+        if (!Mode2)
+        {
+            skeleton.AnimationName = "Jetpack Eat";
+            Invoke("ResetAnim", 1);
+        }
+
         if (counter < cookiesForLvl1)
             counter++;
         else if (counter == cookiesForLvl1)
@@ -138,7 +145,6 @@ public class SpaceController : MonoBehaviour
             counter++;
         else if (counter == cookiesForLvl3)
             TriggerMode3();
-        print(counter);
     }
 
     private void TriggerMode1()
@@ -159,6 +165,11 @@ public class SpaceController : MonoBehaviour
         counter++;
         if (JetPrefab)
             Instantiate(JetPrefab, jetSpawnPoint);
+    }
+
+    void ResetAnim()
+    {
+        skeleton.AnimationName = "Fly Up";
     }
 
 }
