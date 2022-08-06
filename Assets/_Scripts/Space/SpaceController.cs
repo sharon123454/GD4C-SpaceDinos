@@ -8,6 +8,8 @@ public class SpaceController : MonoBehaviour
     public static bool Mode1 = false;
     public static bool Mode2 = false;
 
+    [SerializeField] GameObject JetPrefab;
+    [SerializeField] Transform jetSpawnPoint;
     [SerializeField] int cookiesForLvl1 = 20;
     [SerializeField] int cookiesForLvl2 = 40;
     [SerializeField] int cookiesForLvl3 = 60;
@@ -106,7 +108,8 @@ public class SpaceController : MonoBehaviour
     private void TriggerMode3()
     {
         counter++;
-        print("Game End");
+        if (JetPrefab)
+            Instantiate(JetPrefab, jetSpawnPoint);
     }
 
 }

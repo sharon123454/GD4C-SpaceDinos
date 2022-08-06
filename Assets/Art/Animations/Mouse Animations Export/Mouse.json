@@ -1,0 +1,419 @@
+{
+"skeleton": {
+	"hash": "F67JOod/wsqOwtsG+mYx5T4kMcI",
+	"spine": "3.8.99",
+	"x": -250.24,
+	"y": -260.04,
+	"width": 514,
+	"height": 514,
+	"images": "./images/",
+	"audio": "C:/Users/yarde/Desktop/GD4C Game Jam/Spine Animations/Mouse Animations"
+},
+"bones": [
+	{ "name": "root", "y": -280 },
+	{ "name": "Mouse", "parent": "root", "x": 5.22, "y": 271.55 },
+	{ "name": "Arrow Left", "parent": "root", "x": -182.04, "y": 278.77 },
+	{ "name": "Arrow Right", "parent": "root", "x": 201.73, "y": 278.06 },
+	{ "name": "Arrow Down", "parent": "root", "x": 5.93, "y": 85.11 },
+	{ "name": "Arrow Up", "parent": "root", "x": 5.93, "y": 461.76 },
+	{ "name": "Click", "parent": "Mouse", "x": -24.56, "y": 47.14 }
+],
+"slots": [
+	{ "name": "Arrow Up", "bone": "Arrow Up", "attachment": "Arrow Up" },
+	{ "name": "Arrow Down", "bone": "Arrow Down", "attachment": "Arrow Down" },
+	{ "name": "Arrow Left", "bone": "Arrow Left", "attachment": "Arrow Left" },
+	{ "name": "Arrow Right", "bone": "Arrow Right", "attachment": "Arrow Right" },
+	{ "name": "Mouse", "bone": "Mouse", "attachment": "Mouse" },
+	{ "name": "Click", "bone": "Click", "attachment": "Click" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Arrow Down": {
+				"Arrow Down": { "x": 0.83, "y": 9.35, "width": 140, "height": 149 }
+			},
+			"Arrow Left": {
+				"Arrow Left": { "x": 6.3, "y": -1.81, "width": 149, "height": 140 }
+			},
+			"Arrow Right": {
+				"Arrow Right": { "x": -12.47, "y": -1.1, "width": 149, "height": 140 }
+			},
+			"Arrow Up": {
+				"Arrow Up": { "x": 0.83, "y": -2.3, "width": 140, "height": 149 }
+			},
+			"Click": {
+				"Click": { "x": -2.9, "y": 2.27, "width": 62, "height": 80 }
+			},
+			"Mouse": {
+				"Mouse": { "x": -10.46, "y": 19.91, "width": 156, "height": 231 }
+			}
+		}
+	}
+],
+"animations": {
+	"All Directions No Click": {
+		"slots": {
+			"Click": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Click": {
+				"translate": [
+					{ "time": 0.2333, "y": -19.88 },
+					{ "time": 0.3333, "x": -45.54, "y": 52.33 },
+					{ "time": 0.4667, "x": -87.21, "y": -77.52 },
+					{ "time": 0.7, "x": 72.15, "y": 40.95 }
+				]
+			},
+			"Arrow Right": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 49.27 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Arrow Left": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": -49.96 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Arrow Up": {
+				"translate": [
+					{},
+					{ "time": 0.5, "y": 49.24 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Arrow Down": {
+				"translate": [
+					{},
+					{ "time": 0.5, "y": -50.11 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Mouse": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.2667, "x": 45.54, "y": -32.45, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 87.21, "y": 77.52, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.7667, "x": -72.15, "y": -40.95, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	},
+	"All Directions With Click": {
+		"slots": {
+			"Click": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffffff" },
+					{ "time": 0.3, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3667, "color": "ffffff00" },
+					{ "time": 0.4667, "color": "ffffffff" },
+					{ "time": 0.5, "color": "ff0000ff" },
+					{ "time": 0.5333, "color": "ffffffff" },
+					{ "time": 0.6333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.7, "color": "ffffff00" },
+					{ "time": 0.8, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.8333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.8667, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow Left": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": -49.96 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Arrow Right": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 49.27 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Arrow Up": {
+				"translate": [
+					{},
+					{ "time": 0.5, "y": 49.24 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Arrow Down": {
+				"translate": [
+					{},
+					{ "time": 0.5, "y": -50.11 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Mouse": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.2667, "x": 45.54, "y": -32.45, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 87.21, "y": 77.52, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.7667, "x": -72.15, "y": -40.95, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	},
+	"Click Only": {
+		"slots": {
+			"Arrow Down": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Arrow Left": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Arrow Right": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Arrow Up": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Click": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffff00" },
+					{ "time": 0.3, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.5333, "color": "ffffff00" },
+					{ "time": 0.6333, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ff0000ff" },
+					{ "time": 0.7, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.8667, "color": "ffffff00" },
+					{ "time": 0.9667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.0333, "color": "ffffffff" },
+					{ "time": 1.1333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.3333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Mouse": {
+				"scale": [
+					{},
+					{ "time": 0.6667, "x": 1.2, "y": 1.2 },
+					{ "time": 1.3333 }
+				]
+			},
+			"Click": {
+				"scale": [
+					{},
+					{ "time": 0.6667, "x": 1.1, "y": 1.1 },
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	},
+	"Drag": {
+		"slots": {
+			"Arrow Down": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Arrow Left": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Arrow Right": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Arrow Up": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Click": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffff00" },
+					{ "time": 0.8667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.7333, "color": "ffffffff" },
+					{ "time": 2, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Mouse": {
+				"rotate": [
+					{}
+				],
+				"translate": [
+					{ "x": -5.57, "y": -3.16 },
+					{ "time": 0.6667, "x": 152.05, "y": 105.62, "curve": "stepped" },
+					{ "time": 1.0667, "x": 152.05, "y": 105.62 },
+					{ "time": 1.7333, "x": -5.57, "y": -3.16, "curve": "stepped" },
+					{ "time": 2, "x": -5.57, "y": -3.16 }
+				],
+				"scale": [
+					{}
+				],
+				"shear": [
+					{}
+				]
+			},
+			"Arrow Left": {
+				"translate": [
+					{ "x": -3.33 }
+				],
+				"scale": [
+					{ "x": 1.007, "y": 1.007 }
+				]
+			},
+			"Arrow Right": {
+				"translate": [
+					{ "x": 3.28 }
+				],
+				"scale": [
+					{ "x": 1.007, "y": 1.007 }
+				]
+			},
+			"Arrow Down": {
+				"translate": [
+					{ "y": -3.34 }
+				],
+				"scale": [
+					{ "x": 1.007, "y": 1.007 }
+				]
+			},
+			"Arrow Up": {
+				"translate": [
+					{ "y": 3.28 }
+				],
+				"scale": [
+					{ "x": 1.007, "y": 1.007 }
+				]
+			}
+		}
+	},
+	"Sides Move Only": {
+		"slots": {
+			"Arrow Down": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Arrow Up": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"Click": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow Right": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 49.27 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Arrow Left": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": -49.96 },
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.5, "x": 1.1, "y": 1.1 },
+					{ "time": 1 }
+				]
+			},
+			"Click": {
+				"translate": [
+					{ "time": 0.3333, "x": -46.16 },
+					{ "time": 0.6667, "x": 41.63 }
+				]
+			},
+			"Mouse": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "x": 46.16, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6667, "x": -41.63, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

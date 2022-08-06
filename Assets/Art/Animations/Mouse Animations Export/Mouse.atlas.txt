@@ -1,0 +1,48 @@
+
+Mouse.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arrow Down
+  rotate: true
+  xy: 235, 18
+  size: 140, 149
+  orig: 140, 149
+  offset: 0, 0
+  index: -1
+Arrow Left
+  rotate: false
+  xy: 386, 18
+  size: 149, 140
+  orig: 149, 140
+  offset: 0, 0
+  index: -1
+Arrow Right
+  rotate: false
+  xy: 537, 18
+  size: 149, 140
+  orig: 149, 140
+  offset: 0, 0
+  index: -1
+Arrow Up
+  rotate: true
+  xy: 688, 18
+  size: 140, 149
+  orig: 140, 149
+  offset: 0, 0
+  index: -1
+Click
+  rotate: false
+  xy: 839, 78
+  size: 62, 80
+  orig: 62, 80
+  offset: 0, 0
+  index: -1
+Mouse
+  rotate: true
+  xy: 2, 2
+  size: 156, 231
+  orig: 156, 231
+  offset: 0, 0
+  index: -1
