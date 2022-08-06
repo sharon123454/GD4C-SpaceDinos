@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EggGameManager : MonoBehaviour
 {
-    [SerializeField] Image BGImage;
+    [SerializeField] SpriteRenderer BGImage;
     [SerializeField] Sprite[] spriteArr;
     int counter = 0;
 
@@ -37,7 +37,6 @@ public class EggGameManager : MonoBehaviour
                     return;
             }
         }
-
     }
 
     public void ScreenClicked()
@@ -47,7 +46,6 @@ public class EggGameManager : MonoBehaviour
             BGImage.sprite = spriteArr[counter];
             counter++;
         }
-
     }
 
     void FirstClick()
@@ -63,8 +61,6 @@ public class EggGameManager : MonoBehaviour
         TB2ndto1st = timer;
         timer = 0;
         runTime = true;
-        
-
     }
 
     void ThirdClick()
