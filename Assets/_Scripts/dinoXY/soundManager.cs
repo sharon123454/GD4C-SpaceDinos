@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class soundManager : MonoBehaviour
 {
@@ -18,8 +19,6 @@ public class soundManager : MonoBehaviour
     [SerializeField] public AudioSource candy;
     //[SerializeField] AudioSource chew;
     //[SerializeField] AudioSource chew;
-
-
 
     private void Awake()
     {
@@ -53,9 +52,12 @@ public class soundManager : MonoBehaviour
     {
         ringWrapping.Play();
     }
-    // Update is called once per frame
+
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
