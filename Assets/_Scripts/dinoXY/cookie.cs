@@ -25,7 +25,7 @@ public class cookie : MonoBehaviour
 
         if (cookieManager.lostCookies > 20)
         {
-            cookieManager.gameOverText.gameObject.SetActive(true);
+            //cookieManager.gameOverText.gameObject.SetActive(true);
         }
     }
 
