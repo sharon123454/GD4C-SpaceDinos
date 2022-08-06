@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cookie
   - HCookie
+  - MCookie
   layers:
   - Default
   - TransparentFX
