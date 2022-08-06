@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EggGameManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class EggGameManager : MonoBehaviour
 
     private void Update()
     {
+        if (counter == 15)
+        {
+            SceneManager.LoadScene(1);
+        }
         if (runTime)
             timer += Time.deltaTime;
 
