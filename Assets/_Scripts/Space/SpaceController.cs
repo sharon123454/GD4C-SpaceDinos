@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class SpaceController : MonoBehaviour
@@ -11,7 +10,6 @@ public class SpaceController : MonoBehaviour
     [SerializeField] int cookiesForLvl1 = 20;
     [SerializeField] int cookiesForLvl2 = 40;
     [SerializeField] int cookiesForLvl3 = 60;
-    [SerializeField] Transform[] BagSpawnPoints;
     int counter = 0;
 
     [Header("Mouse Limitations")]
@@ -21,28 +19,17 @@ public class SpaceController : MonoBehaviour
     [SerializeField] float MaxYMousePos = 3.4f;
 
     private GameObject hardCookieInCollision;
-    private GameObject movableCookieOutCollision;
 
     void Update()
     {
         Controller();
-        
+
         if (Mode1 && Input.GetMouseButtonDown(0))
             if (hardCookieInCollision)
             {
                 Destroy(hardCookieInCollision);
                 Collect();
             }
-
-        if (Mode2 && Input.GetMouseButton(0))
-        {
-            if (movableCookieOutCollision)
-            {
-                movableCookieOutCollision.transform.position = transform.position;
-            }
-        }
-
-        movableCookieOutCollision = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -58,15 +45,6 @@ public class SpaceController : MonoBehaviour
     {
         if (collision.transform.CompareTag("HCookie") && hardCookieInCollision != collision.gameObject)
             hardCookieInCollision = collision.gameObject;
-
-        if (collision.transform.CompareTag("MCookie"))
-            movableCookieOutCollision = collision.gameObject;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("HCookie") && collision.gameObject == movableCookieOutCollision)
-            movableCookieOutCollision = null;
     }
 
     private void Controller()
@@ -90,7 +68,10 @@ public class SpaceController : MonoBehaviour
         else if (counter < cookiesForLvl3)
             counter++;
         else if (counter >= cookiesForLvl3)
-            TriggerMode3();
+        {
+            counter++;
+            print("Gay");
+        }
     }
 
     private void TriggerMode1()
@@ -102,11 +83,6 @@ public class SpaceController : MonoBehaviour
     private void TriggerMode2()
     {
         Mode2 = true;
-        counter++;
-    }
-
-    private void TriggerMode3()
-    {
         counter++;
     }
 
