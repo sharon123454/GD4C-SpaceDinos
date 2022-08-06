@@ -29,6 +29,28 @@ public class SpaceController : MonoBehaviour
     private GameObject movableCookieInCollision;
     private GameObject bagInCollision;
 
+    private void Start()
+    {
+        switch (GameMode)
+        {
+            case 0:
+                soundManager.Instance.intractions3.Play();
+                break;                
+            case 1:
+                counter = cookiesForLvl1;
+                TriggerMode1();
+                soundManager.Instance.intractions4.Play();
+                break;
+            case 2:
+                counter = cookiesForLvl2;
+                TriggerMode2();
+                soundManager.Instance.intractions5.Play();
+                break;
+            default:
+                break;
+        }
+    }
+
     void Update()
     {
         Controller();
@@ -36,7 +58,9 @@ public class SpaceController : MonoBehaviour
         if (Mode1 && Input.GetMouseButtonDown(0))
             if (hardCookieInCollision)
             {
-                Destroy(hardCookieInCollision);
+                soundManager.Instance.candy.Play();
+                soundManager.Instance.ringWrapping.Play();
+                Destroy(hardCookieInCollision);                
                 Collect();
             }
 
@@ -57,29 +81,14 @@ public class SpaceController : MonoBehaviour
         movableCookieInCollision = null;
     }
 
-    private void Start()
-    {
-        switch (GameMode)
-        {
-            case 0:
-                break;
-            case 1:
-                counter = cookiesForLvl1;
-                TriggerMode1();
-                break;
-            case 2:
-                counter = cookiesForLvl2;
-                TriggerMode2();
-                break;
-            default:
-                break;
-        }
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("Cookie"))
         {
+            soundManager.Instance.playRingCookie2();
+            soundManager.Instance.PlayChew();
             Destroy(collision.gameObject);
             Collect();
         }
@@ -95,6 +104,7 @@ public class SpaceController : MonoBehaviour
 
         if (movableCookieInCollision != null && collision.transform.CompareTag("Bag"))
         {
+            soundManager.Instance.playRingCookie();
             bagInCollision = collision.gameObject;
             candyOverBag = true;
         }

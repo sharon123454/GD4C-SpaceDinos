@@ -5,9 +5,10 @@ using UnityEngine;
 public class soundManager : MonoBehaviour
 {
     public static soundManager Instance;
-    [SerializeField] AudioSource chew;
-    [SerializeField] AudioSource ringCookie;
-    [SerializeField] AudioSource ringWrapping;
+    [SerializeField] public AudioSource chew;
+    [SerializeField] public AudioSource ringCookie;
+    [SerializeField] public AudioSource ringCookie2;
+    [SerializeField] public AudioSource ringWrapping;
     [SerializeField] public AudioSource intractions1;    
     [SerializeField] public AudioSource intractions2;
     [SerializeField] public AudioSource intractions3;
@@ -29,6 +30,11 @@ public class soundManager : MonoBehaviour
         Instance = this;
 
     }
+
+    private void OnEnable()
+    {
+        Cursor.visible = false;
+    }
     // Start is called before the first frame update
     public void PlayChew()
     {
@@ -39,6 +45,10 @@ public class soundManager : MonoBehaviour
         ringCookie.Play();
     }
 
+    public void playRingCookie2()
+    {
+        ringCookie2.Play();
+    }
     public void playRingWrapping()
     {
         ringWrapping.Play();
