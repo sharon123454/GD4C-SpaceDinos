@@ -11,7 +11,7 @@ public class lvl2Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundManager.Instance.intractions2.Play();
     }
 
     // Update is called once per frame

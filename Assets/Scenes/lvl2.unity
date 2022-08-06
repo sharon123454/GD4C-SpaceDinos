@@ -154,6 +154,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.493
       objectReference: {fileID: 0}
+    - target: {fileID: 32868737070610845, guid: a95f0d1cf8774e24cbe11743f040c512, type: 3}
+      propertyPath: intractions2
+      value: 
+      objectReference: {fileID: 420752748}
     - target: {fileID: 5280212181963893978, guid: a95f0d1cf8774e24cbe11743f040c512, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -482,6 +486,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419751479}
   m_CullTransparentMesh: 1
+--- !u!82 &420752748 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2946556511830774249, guid: a95f0d1cf8774e24cbe11743f040c512, type: 3}
+  m_PrefabInstance: {fileID: 17612884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &799222137
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799222137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.6, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
