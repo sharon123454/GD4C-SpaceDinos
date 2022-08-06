@@ -9,7 +9,7 @@ public class dinoLvl2 : MonoBehaviour
     [SerializeField] float speed = 1;
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] float minToFlip = 0.05f;
-    [SerializeField] private AudioSource chew;
+
 
     private void Start()
     {
@@ -42,7 +42,8 @@ public class dinoLvl2 : MonoBehaviour
     {
         if (collision.CompareTag("Cookie"))
         {
-            chew.Play();
+            soundManager.Instance.playRingCookie();
+            soundManager.Instance.PlayChew();
         }
     }
 }

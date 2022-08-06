@@ -27,7 +27,6 @@ public class lvl2Manager : MonoBehaviour
             if (cookieSpawner.cookieSpeed < 7)
             {
                 cookieSpawner.cookieSpeed += 0.1f;
-                print(cookieSpawner.cookieSpeed);
             }
             cookieManager.cookieCount = 0;
         }
