@@ -5,7 +5,7 @@ using UnityEngine;
 public class cookie : MonoBehaviour
 {   
     private SpriteRenderer sprite;
-   
+        
     float speed=1;
 
     private void Start()
