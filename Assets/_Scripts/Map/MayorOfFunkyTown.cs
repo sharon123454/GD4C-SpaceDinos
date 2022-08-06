@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MayorOfFunkyTown : MonoBehaviour
 {
-    private void OnEnable()
+    private void Update()
     {
         Cursor.visible = true;
     }
