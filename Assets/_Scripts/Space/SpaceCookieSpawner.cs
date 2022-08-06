@@ -23,10 +23,12 @@ public class SpaceCookieSpawner : MonoBehaviour
 
     private void SpawnCookie()
     {
-        if (!SpaceController.Mode1)
+        if (!SpaceController.Mode1 && !SpaceController.Mode2)
             NormalCookie();
-        else
+        else if(SpaceController.Mode1)
             HardCookie();
+        else if(SpaceController.Mode2)
+            MovableCookie();
 
         allowedToSpawn = false;
         Invoke("ResetTimer", timeBetweenSpawn);
