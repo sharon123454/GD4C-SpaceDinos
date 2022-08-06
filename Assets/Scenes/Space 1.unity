@@ -407,11 +407,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fa3d3bd54b7a54b896d350b744f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameMode: 1
+  spawner: {fileID: 2051982757}
   JetPrefab: {fileID: 0}
   jetSpawnPoint: {fileID: 566960512}
-  cookiesForLvl1: 2
-  cookiesForLvl2: 4
-  cookiesForLvl3: 10
+  cookiesForLvl1: 5
+  cookiesForLvl2: 10
+  cookiesForLvl3: 15
   BagSpawnPoints:
   - {fileID: 1705286010}
   - {fileID: 1803662757}

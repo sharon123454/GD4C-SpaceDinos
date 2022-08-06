@@ -13,7 +13,7 @@ public class SpaceSpawner : MonoBehaviour
     [SerializeField] Transform topRight;
     [SerializeField] Transform bottomLeft;
     [SerializeField] float spawnAmount, timeBetweenSpawn;
-    protected bool allowedToSpawn = true;
+    internal bool allowedToSpawn = true;
 
     private void Update()
     {
