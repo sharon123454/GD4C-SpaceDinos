@@ -16,6 +16,10 @@ public class EggGameManager : MonoBehaviour
     int _clickNum = 0;
     bool runTime = false;
 
+    private void Start()
+    {
+        soundManager.Instance.intractions1.Play();
+    }
     private void Update()
     {
         if (counter == 15)
@@ -42,6 +46,7 @@ public class EggGameManager : MonoBehaviour
                     return;
             }
         }
+
     }
 
     public void ScreenClicked()
@@ -50,6 +55,8 @@ public class EggGameManager : MonoBehaviour
         {
             BGImage.sprite = spriteArr[counter];
             counter++;
+           int x = Random.Range(0, soundManager.Instance.eggCrecking.Count);
+            soundManager.Instance.eggCrecking[x].Play();
         }
     }
 

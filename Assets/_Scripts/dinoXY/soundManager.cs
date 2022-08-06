@@ -8,8 +8,13 @@ public class soundManager : MonoBehaviour
     [SerializeField] AudioSource chew;
     [SerializeField] AudioSource ringCookie;
     [SerializeField] AudioSource ringWrapping;
-    [SerializeField] AudioSource eggCrecking;
-    //[SerializeField] AudioSource chew;
+    [SerializeField] public AudioSource intractions1;    
+    [SerializeField] public AudioSource intractions2;
+    [SerializeField] public AudioSource intractions3;
+    [SerializeField] public AudioSource intractions4;
+    [SerializeField] public AudioSource intractions5;
+    [SerializeField] public List <AudioSource> eggCrecking;
+    [SerializeField] public AudioSource candy;
     //[SerializeField] AudioSource chew;
     //[SerializeField] AudioSource chew;
 
