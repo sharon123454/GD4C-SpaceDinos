@@ -7,6 +7,7 @@ TagManager:
   - Cookie
   - HCookie
   - MCookie
+  - Bag
   layers:
   - Default
   - TransparentFX

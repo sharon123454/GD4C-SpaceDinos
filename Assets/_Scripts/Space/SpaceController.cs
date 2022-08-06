@@ -8,6 +8,8 @@ public class SpaceController : MonoBehaviour
     public static bool Mode1 = false;
     public static bool Mode2 = false;
 
+    [SerializeField] int GameMode = 0;
+    [SerializeField] SpaceSpawner spawner;
     [SerializeField] GameObject JetPrefab;
     [SerializeField] Transform jetSpawnPoint;
     [SerializeField] int cookiesForLvl1 = 20;
@@ -15,6 +17,7 @@ public class SpaceController : MonoBehaviour
     [SerializeField] int cookiesForLvl3 = 60;
     [SerializeField] Transform[] BagSpawnPoints;
     int counter = 0;
+    bool candyOverBag = false;
 
     [Header("Mouse Limitations")]
     [SerializeField] float MinXMousePos = -7.4f;
@@ -24,6 +27,7 @@ public class SpaceController : MonoBehaviour
 
     private GameObject hardCookieInCollision;
     private GameObject movableCookieInCollision;
+    private GameObject bagInCollision;
 
     void Update()
     {
@@ -40,7 +44,36 @@ public class SpaceController : MonoBehaviour
             if (movableCookieInCollision)
                 movableCookieInCollision.transform.position = transform.position;
 
+        if (candyOverBag)
+        {
+            Destroy(movableCookieInCollision);
+            Destroy(bagInCollision);
+            Collect();
+            bagInCollision = null;
+            candyOverBag = false;
+            spawner.allowedToSpawn = true;
+        }
+
         movableCookieInCollision = null;
+    }
+
+    private void Start()
+    {
+        switch (GameMode)
+        {
+            case 0:
+                break;
+            case 1:
+                counter = cookiesForLvl1;
+                TriggerMode1();
+                break;
+            case 2:
+                counter = cookiesForLvl2;
+                TriggerMode2();
+                break;
+            default:
+                break;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,6 +92,12 @@ public class SpaceController : MonoBehaviour
 
         if (collision.transform.CompareTag("MCookie"))
             movableCookieInCollision = collision.gameObject;
+
+        if (movableCookieInCollision != null && collision.transform.CompareTag("Bag"))
+        {
+            bagInCollision = collision.gameObject;
+            candyOverBag = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -87,7 +126,7 @@ public class SpaceController : MonoBehaviour
             TriggerMode2();
         else if (counter < cookiesForLvl3)
             counter++;
-        else if (counter >= cookiesForLvl3)
+        else if (counter == cookiesForLvl3)
             TriggerMode3();
         print(counter);
     }
