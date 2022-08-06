@@ -8,6 +8,7 @@ public class lvl2Manager : MonoBehaviour
     [SerializeField] int cookieNeeded;
    
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,4 +32,6 @@ public class lvl2Manager : MonoBehaviour
             cookieManager.cookieCount = 0;
         }
     }
+
+    
 }
