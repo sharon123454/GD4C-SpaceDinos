@@ -347,9 +347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fa3d3bd54b7a54b896d350b744f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookiesForLvl1: 1
-  cookiesForLvl2: 2
-  cookiesForLvl3: 5
+  cookiesForLvl1: 2
+  cookiesForLvl2: 4
+  cookiesForLvl3: 10
   BagSpawnPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 2051982756}
   - component: {fileID: 2051982757}
   m_Layer: 0
-  m_Name: CookieSpawner
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,8 +627,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookiePrefab: {fileID: 1775782621729665055, guid: 27ebd03ef66c5b4479170fdee3b089a6, type: 3}
   hardCookiePrefab: {fileID: 1775782621729665055, guid: 10fc943d83211cf4c9732c1650606627, type: 3}
-  movablePrefab: {fileID: 0}
-  movableCollector: {fileID: 0}
+  movablePrefab: {fileID: 1775782621729665055, guid: a2669064dc4b96a41a91e9c2509ea836, type: 3}
+  movableCollector: {fileID: 1775782621729665055, guid: d2e70d3cc5b827547a000cca9b6e1b60, type: 3}
   topRight: {fileID: 119551364}
   bottomLeft: {fileID: 1785142968}
   spawnAmount: 1
@@ -660,7 +660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069428588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3, y: -6.8, z: 0}
+  m_LocalPosition: {x: 1, y: -7, z: 0}
   m_LocalScale: {x: 3.3333333, y: 3.3333333, z: 3.3333333}
   m_Children: []
   m_Father: {fileID: 922380944}

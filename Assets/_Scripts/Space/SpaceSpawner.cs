@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceCookieSpawner : MonoBehaviour
+public class SpaceSpawner : MonoBehaviour
 {
     [SerializeField] GameObject cookiePrefab;
     [SerializeField] GameObject hardCookiePrefab;
@@ -13,7 +13,7 @@ public class SpaceCookieSpawner : MonoBehaviour
     [SerializeField] Transform topRight;
     [SerializeField] Transform bottomLeft;
     [SerializeField] float spawnAmount, timeBetweenSpawn;
-    bool allowedToSpawn = true;
+    protected bool allowedToSpawn = true;
 
     private void Update()
     {
@@ -25,13 +25,16 @@ public class SpaceCookieSpawner : MonoBehaviour
     {
         if (!SpaceController.Mode1 && !SpaceController.Mode2)
             NormalCookie();
-        else if(SpaceController.Mode1)
+        else if (SpaceController.Mode1)
             HardCookie();
-        else if(SpaceController.Mode2)
+        else if (SpaceController.Mode2)
             MovableCookie();
+        else
+            print("Exception not accounted (cookie didn't spawn)");
 
         allowedToSpawn = false;
-        Invoke("ResetTimer", timeBetweenSpawn);
+        if (!SpaceController.Mode2)
+            Invoke("ResetTimer", timeBetweenSpawn);
     }
 
     private void NormalCookie()

@@ -21,7 +21,7 @@ public class SpaceController : MonoBehaviour
     [SerializeField] float MaxYMousePos = 3.4f;
 
     private GameObject hardCookieInCollision;
-    private GameObject movableCookieOutCollision;
+    private GameObject movableCookieInCollision;
 
     void Update()
     {
@@ -35,14 +35,10 @@ public class SpaceController : MonoBehaviour
             }
 
         if (Mode2 && Input.GetMouseButton(0))
-        {
-            if (movableCookieOutCollision)
-            {
-                movableCookieOutCollision.transform.position = transform.position;
-            }
-        }
+            if (movableCookieInCollision)
+                movableCookieInCollision.transform.position = transform.position;
 
-        movableCookieOutCollision = null;
+        movableCookieInCollision = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,13 +56,13 @@ public class SpaceController : MonoBehaviour
             hardCookieInCollision = collision.gameObject;
 
         if (collision.transform.CompareTag("MCookie"))
-            movableCookieOutCollision = collision.gameObject;
+            movableCookieInCollision = collision.gameObject;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("HCookie") && collision.gameObject == movableCookieOutCollision)
-            movableCookieOutCollision = null;
+        if (collision.transform.CompareTag("HCookie") && collision.gameObject == movableCookieInCollision)
+            movableCookieInCollision = null;
     }
 
     private void Controller()
@@ -91,6 +87,7 @@ public class SpaceController : MonoBehaviour
             counter++;
         else if (counter >= cookiesForLvl3)
             TriggerMode3();
+        print(counter);
     }
 
     private void TriggerMode1()
@@ -101,6 +98,7 @@ public class SpaceController : MonoBehaviour
 
     private void TriggerMode2()
     {
+        Mode1 = false;
         Mode2 = true;
         counter++;
     }
@@ -108,6 +106,7 @@ public class SpaceController : MonoBehaviour
     private void TriggerMode3()
     {
         counter++;
+        print("Game End");
     }
 
 }
