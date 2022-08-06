@@ -530,9 +530,9 @@ MonoBehaviour:
   spawner: {fileID: 2051982757}
   JetPrefab: {fileID: 0}
   jetSpawnPoint: {fileID: 566960512}
-  cookiesForLvl1: 5
-  cookiesForLvl2: 10
-  cookiesForLvl3: 15
+  cookiesForLvl1: 200000000
+  cookiesForLvl2: 200000000
+  cookiesForLvl3: 200000000
   BagSpawnPoints:
   - {fileID: 1705286010}
   - {fileID: 1803662757}
