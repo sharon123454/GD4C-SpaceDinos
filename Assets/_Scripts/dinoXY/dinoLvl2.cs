@@ -8,7 +8,7 @@ public class dinoLvl2 : MonoBehaviour
     [SerializeField] Transform right;
     [SerializeField] float speed = 1;
     [SerializeField] SpriteRenderer sprite;
-    [SerializeField] float minToFlip = 0.05f;
+    //[SerializeField] float minToFlip = 0.05f;
 
 
     private void Start()
@@ -29,11 +29,11 @@ public class dinoLvl2 : MonoBehaviour
         {
             if (transform.position.x < mousePosition.x)
             {
-                sprite.flipX = true;
+             //   sprite.flipX = true;
             }
             else if (transform.position.x > mousePosition.x)
             {
-                sprite.flipX = false;
+              //  sprite.flipX = false;
             }
         }
         transform.position = new Vector3(mousePosition.x, transform.position.y, transform.position.z);
