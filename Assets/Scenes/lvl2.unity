@@ -202,7 +202,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'soundMangager '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 284606682, guid: a95f0d1cf8774e24cbe11743f040c512, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a95f0d1cf8774e24cbe11743f040c512, type: 3}
 --- !u!82 &17612885 stripped
 AudioSource:
@@ -583,6 +584,7 @@ MonoBehaviour:
   speed: 2
   sprite: {fileID: 799222138}
   minToFlip: 0.05
+  chew: {fileID: 0}
 --- !u!61 &799222141
 BoxCollider2D:
   m_ObjectHideFlags: 0
