@@ -592,7 +592,6 @@ MonoBehaviour:
   right: {fileID: 199198363}
   speed: 2
   sprite: {fileID: 799222138}
-  minToFlip: 0.05
 --- !u!61 &799222141
 BoxCollider2D:
   m_ObjectHideFlags: 0
