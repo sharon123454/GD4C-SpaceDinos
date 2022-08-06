@@ -24,13 +24,17 @@ public class dinoLvl2 : MonoBehaviour
         { mousePosition.x = left.transform.position.x; }
         if (mousePosition.x > right.transform.position.x)
         { mousePosition.x = right.transform.position.x; }
-        if (Mathf.Abs(transform.position.x - mousePosition.x) > 1 && transform.position.x < mousePosition.x)
+        if (Mathf.Abs(transform.position.x - mousePosition.x) > 0.2)
+
         {
-            sprite.flipX = true;
-        }
-        else if (Mathf.Abs(transform.position.x - mousePosition.x) > 1 && transform.position.x > mousePosition.x)
-        {
-            sprite.flipX = false;
+            if (transform.position.x < mousePosition.x)
+            {
+                sprite.flipX = true;
+            }
+            else if (transform.position.x > mousePosition.x)
+            {
+                sprite.flipX = false;
+            }
         }
         transform.position = new Vector3(mousePosition.x, transform.position.y, transform.position.z);
     }
