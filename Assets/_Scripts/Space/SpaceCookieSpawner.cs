@@ -6,6 +6,7 @@ public class SpaceCookieSpawner : MonoBehaviour
 {
     [SerializeField] GameObject cookiePrefab;
     [SerializeField] GameObject hardCookiePrefab;
+    [SerializeField] GameObject DraggablePrefab;
 
     [Header("Spawn Area Objects")]
     [SerializeField] Transform topRight;
@@ -21,7 +22,7 @@ public class SpaceCookieSpawner : MonoBehaviour
 
     private void SpawnCookie()
     {
-        if (!SpaceController.hardMode)
+        if (!SpaceController.Mode1)
             NormalCookie();
         else
             HardCookie();
@@ -39,19 +40,7 @@ public class SpaceCookieSpawner : MonoBehaviour
     private void HardCookie()
     {
         for (int i = 0; i < spawnAmount; i++)
-        {
-            int rand = Random.Range(0, 1);
-
-            switch (rand)
-            {
-                case 0:
-                    Instantiate(cookiePrefab, RandomizeSpawnPos(), Quaternion.identity);
-                    break;
-                case 1:
-                    Instantiate(hardCookiePrefab, RandomizeSpawnPos(), Quaternion.identity);
-                    break;
-            }
-        }
+            Instantiate(hardCookiePrefab, RandomizeSpawnPos(), Quaternion.identity);
     }
 
     private Vector2 RandomizeSpawnPos()

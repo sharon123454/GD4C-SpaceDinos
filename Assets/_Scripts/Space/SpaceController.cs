@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SpaceController : MonoBehaviour
 {
-    public static bool hardMode = false;
+    public static bool Mode1 = false;
+    public static bool Mode2 = false;
 
-    [SerializeField] int cookies4NextLvl = 20;
+    [SerializeField] int cookiesForLvl1 = 20;
+    [SerializeField] int cookiesForLvl2 = 40;
+    [SerializeField] int cookiesForLvl3 = 60;
     int counter = 0;
 
     [Header("Mouse Limitations")]
@@ -16,36 +19,32 @@ public class SpaceController : MonoBehaviour
     [SerializeField] float MaxYMousePos = 3.4f;
 
     private GameObject hardCookieInCollision;
+
     void Update()
     {
         Controller();
 
-        if (hardMode && Input.GetMouseButtonDown(0))
+        if (Mode1 && Input.GetMouseButtonDown(0))
             if (hardCookieInCollision)
             {
                 Destroy(hardCookieInCollision);
                 Collect();
             }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("gay");
         if (collision.transform.CompareTag("Cookie"))
         {
             Destroy(collision.gameObject);
             Collect();
         }
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("HCookie") && hardCookieInCollision.tag != collision.transform.tag)
-        {
+        if (collision.transform.CompareTag("HCookie") && hardCookieInCollision != collision.gameObject)
             hardCookieInCollision = collision.gameObject;
-        }
     }
 
     private void Controller()
@@ -58,15 +57,33 @@ public class SpaceController : MonoBehaviour
 
     private void Collect()
     {
-        if (counter < cookies4NextLvl)
+        if (counter < cookiesForLvl1)
             counter++;
-        else
-            TriggerHardMode();
+        else if (counter == cookiesForLvl1)
+            TriggerMode1();
+        else if (counter < cookiesForLvl2)
+            counter++;
+        else if (counter == cookiesForLvl2)
+            TriggerMode2();
+        else if (counter < cookiesForLvl3)
+            counter++;
+        else if (counter >= cookiesForLvl3)
+        {
+            counter++;
+            print("Gay");
+        }
     }
 
-    private void TriggerHardMode()
+    private void TriggerMode1()
     {
-        hardMode = true;
+        Mode1 = true;
+        counter++;
+    }
+
+    private void TriggerMode2()
+    {
+        Mode2 = true;
+        counter++;
     }
 
 }
