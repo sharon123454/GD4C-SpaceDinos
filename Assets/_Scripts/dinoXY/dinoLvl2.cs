@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Spine.Unity;
 using UnityEngine;
 
 public class dinoLvl2 : MonoBehaviour
@@ -8,6 +9,7 @@ public class dinoLvl2 : MonoBehaviour
     [SerializeField] Transform right;
     [SerializeField] float speed = 1;
     [SerializeField] SpriteRenderer sprite;
+    [SerializeField] SkeletonAnimation skeleton;
     //[SerializeField] float minToFlip = 0.05f;
 
 
@@ -29,11 +31,11 @@ public class dinoLvl2 : MonoBehaviour
         {
             if (transform.position.x < mousePosition.x)
             {
-             //   sprite.flipX = true;
+                print("Supposed flip");
             }
             else if (transform.position.x > mousePosition.x)
             {
-              //  sprite.flipX = false;
+                print("Supposed flip");
             }
         }
         transform.position = new Vector3(mousePosition.x, transform.position.y, transform.position.z);
@@ -42,8 +44,15 @@ public class dinoLvl2 : MonoBehaviour
     {
         if (collision.CompareTag("Cookie"))
         {
+            skeleton.AnimationName = "No Jetpack Eat";
+            Invoke("ResetAnimation", 1);
             soundManager.Instance.playRingCookie();
             soundManager.Instance.PlayChew();
         }
+    }
+
+    private void ResetAnimation()
+    {
+        skeleton.AnimationName = "No Jetpack Walk Faster";
     }
 }

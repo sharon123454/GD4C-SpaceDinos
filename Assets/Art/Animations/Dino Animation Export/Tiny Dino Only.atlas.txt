@@ -1,103 +1,117 @@
 
 Tiny Dino Only.png
-size: 4096,512
+size: 4096,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Arm
-  rotate: false
-  xy: 2611, 9
+  rotate: true
+  xy: 512, 323
   size: 128, 335
   orig: 128, 335
   offset: 0, 0
   index: -1
 Body
-  rotate: true
-  xy: 2, 2
+  rotate: false
+  xy: 2, 289
   size: 508, 726
   orig: 508, 726
   offset: 0, 0
   index: -1
-Head
+Closed Mouth Head
   rotate: false
-  xy: 730, 51
+  xy: 512, 453
+  size: 555, 562
+  orig: 555, 562
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 1626, 487
   size: 528, 459
   orig: 528, 459
   offset: 0, 0
   index: -1
 Jetpack_L
   rotate: true
-  xy: 1572, 32
+  xy: 1066, 150
   size: 223, 579
   orig: 223, 579
   offset: 0, 0
   index: -1
 Jetpack_R
   rotate: true
-  xy: 1572, 257
+  xy: 2, 34
   size: 253, 578
   orig: 253, 578
   offset: 0, 0
   index: -1
 Left Flame
   rotate: true
-  xy: 2153, 105
+  xy: 1647, 2
   size: 166, 284
   orig: 166, 284
   offset: 0, 0
   index: -1
 Left Leg
-  rotate: false
-  xy: 2741, 109
+  rotate: true
+  xy: 1066, 14
   size: 134, 235
   orig: 134, 235
   offset: 0, 0
   index: -1
 Mouth
-  rotate: false
-  xy: 730, 3
+  rotate: true
+  xy: 1050, 375
   size: 76, 46
   orig: 76, 46
   offset: 0, 0
   index: -1
+Open Mouth Head
+  rotate: false
+  xy: 1069, 453
+  size: 555, 562
+  orig: 555, 562
+  offset: 0, 0
+  index: -1
 Pupil_L
-  rotate: true
-  xy: 2152, 273
+  rotate: false
+  xy: 997, 338
   size: 51, 113
   orig: 51, 113
   offset: 0, 0
   index: -1
 Pupil_R
   rotate: true
-  xy: 2153, 19
+  xy: 849, 367
   size: 84, 146
   orig: 84, 146
   offset: 0, 0
   index: -1
 Right Flame
   rotate: true
-  xy: 2469, 346
+  xy: 1933, 49
   size: 164, 279
   orig: 164, 279
   offset: 0, 0
   index: -1
 Right Leg
   rotate: false
-  xy: 2439, 54
+  xy: 1833, 215
   size: 170, 270
   orig: 170, 270
   offset: 0, 0
   index: -1
 Straps
-  rotate: true
-  xy: 2152, 326
+  rotate: false
+  xy: 1647, 170
   size: 184, 315
   orig: 184, 315
   offset: 0, 0
   index: -1
 Tail
-  rotate: true
-  xy: 1260, 28
+  rotate: false
+  xy: 582, 11
   size: 482, 310
   orig: 482, 310
   offset: 0, 0
