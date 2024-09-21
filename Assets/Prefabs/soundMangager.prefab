@@ -62,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chew: {fileID: 284606683}
   ringCookie: {fileID: 284606679}
+  ringCookie2: {fileID: 284606678}
   ringWrapping: {fileID: 284606678}
   intractions1: {fileID: 5285103464086137535}
   intractions2: {fileID: 2946556511830774249}
