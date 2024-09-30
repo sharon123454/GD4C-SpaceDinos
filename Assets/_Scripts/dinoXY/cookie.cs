@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class cookie : MonoBehaviour
-{   
+{
+    [SerializeField] private float speed = 3.5f;
+
     private SpriteRenderer sprite;
-    
-        
-    float speed=1;
 
     private void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
     }
+
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y - speed*Time.deltaTime, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
         if (transform.position.y < -10.5)
         {
             cookieManager.lostCookies += 1;
@@ -41,6 +39,6 @@ public class cookie : MonoBehaviour
             Destroy(gameObject);
 
         }
-    }    
+    }
 
 }

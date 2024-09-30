@@ -24,10 +24,6 @@ public class lvl2Manager : MonoBehaviour
                 cookieSpawner.intervalLow -= 0.5f;
                 cookieSpawner.intervalHigh -= 0.5f;                
             }
-            if (cookieSpawner.cookieSpeed < 7)
-            {
-                cookieSpawner.cookieSpeed += 0.1f;
-            }
             cookieManager.cookieCount = 0;
         }
     }
