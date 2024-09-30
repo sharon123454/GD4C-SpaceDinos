@@ -27,6 +27,7 @@ public class SettingsMenu : MonoBehaviour
             else
             {
                 _settingWindow.SetActive(true);
+                Cursor.visible = true;
                 Time.timeScale = 0f;
             }
         }
@@ -35,6 +36,7 @@ public class SettingsMenu : MonoBehaviour
     private void ResumeGame()
     {
         _settingWindow.SetActive(false);
+        Cursor.visible = false;
         Time.timeScale = 1f;
     }
 
