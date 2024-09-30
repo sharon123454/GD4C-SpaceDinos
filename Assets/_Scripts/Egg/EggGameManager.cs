@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class EggGameManager : MonoBehaviour
 {
@@ -24,7 +21,7 @@ public class EggGameManager : MonoBehaviour
     {
         if (counter == 15)
         {
-            SceneManager.LoadScene(1);
+            Invoke("LoadNextScene", 3);
         }
         if (runTime)
             timer += Time.deltaTime;
@@ -55,7 +52,7 @@ public class EggGameManager : MonoBehaviour
         {
             BGImage.sprite = spriteArr[counter];
             counter++;
-           int x = Random.Range(0, soundManager.Instance.eggCrecking.Count);
+            int x = Random.Range(0, soundManager.Instance.eggCrecking.Count);
             soundManager.Instance.eggCrecking[x].Play();
         }
     }
@@ -94,5 +91,7 @@ public class EggGameManager : MonoBehaviour
         TB2ndto1st = 0;
         TB3rdto2nd = 0;
     }
+
+    private void LoadNextScene() { SceneManager.LoadScene(1); }
 
 }
